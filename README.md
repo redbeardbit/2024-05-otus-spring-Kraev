@@ -1,6 +1,15 @@
 # Репозиторий курса OTUS: "Разработчик Spring Framework"
 
-Здесь ведутся домашние задания курса
+Здесь ведутся домашние задания курса.
+
+Домашние задания размещаются в папках `hwХХ`, где `ХХ` - номер домашнего задания.
+
+Структура каталога:
+
+2024-05-otus-spring-Kraev\
+
+<details>
+<summary>Дополнительная информация</summary>
 
 ## Что необходимо?
 
@@ -93,3 +102,4 @@ DevOps](https://www.oreilly.com/library/view/the-art-of/9780134031408/)
 * [Domain-Driven Design Distilled](https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/)
 * [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
 * [Holub on Patterns: Learning Design Patterns by Looking at Code](https://www.amazon.com/Holub-Patterns-Learning-Looking-Professionals/dp/159059388X)
+</details>
