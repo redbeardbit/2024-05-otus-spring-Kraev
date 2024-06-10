@@ -4,7 +4,8 @@ import lombok.RequiredArgsConstructor;
 import ru.otus.hw.config.TestFileNameProvider;
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.domain.Question;
-import ru.otus.hw.service.QuestionReaderService;
+import ru.otus.hw.service.reader.QuestionReaderService;
+import ru.otus.hw.service.mapper.QuestionMapper;
 
 
 import java.util.List;

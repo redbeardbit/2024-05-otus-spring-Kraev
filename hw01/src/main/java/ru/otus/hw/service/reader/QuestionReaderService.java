@@ -1,4 +1,4 @@
-package ru.otus.hw.service;
+package ru.otus.hw.service.reader;
 
 import ru.otus.hw.dao.dto.QuestionDto;
 
@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface QuestionReaderService {
 
-    public List<QuestionDto> getQuestions(String sourceName);
+    List<QuestionDto> getQuestions(String sourceName);
 
 }

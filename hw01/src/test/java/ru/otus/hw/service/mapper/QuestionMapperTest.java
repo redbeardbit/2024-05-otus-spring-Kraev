@@ -1,10 +1,11 @@
-package ru.otus.hw.dao;
+package ru.otus.hw.service.mapper;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.domain.Answer;
 import ru.otus.hw.domain.Question;
+import ru.otus.hw.service.mapper.QuestionMapper;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -12,8 +12,8 @@
         </constructor-arg>
     </bean>
 
-    <bean id="questionMapper" class="ru.otus.hw.dao.QuestionMapper"/>
-    <bean id="questionReader" class="ru.otus.hw.service.QuestionCsvReaderService">
+    <bean id="questionMapper" class="ru.otus.hw.service.mapper.QuestionMapper"/>
+    <bean id="questionReader" class="ru.otus.hw.service.reader.QuestionCsvReaderService">
         <property name="skipLines" value="1"/>
     </bean>
 

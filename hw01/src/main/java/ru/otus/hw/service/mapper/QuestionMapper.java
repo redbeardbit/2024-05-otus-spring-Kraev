@@ -1,4 +1,4 @@
-package ru.otus.hw.dao;
+package ru.otus.hw.service.mapper;
 
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.domain.Question;
@@ -12,7 +12,7 @@ public class QuestionMapper {
     public List<Question> questionDtosToQuestions(List<QuestionDto> questionDtoList) {
         return questionDtoList.stream()
                 .filter(Objects::nonNull)
-                .map(dto -> dto.toDomainObject())
+                .map(QuestionDto::toDomainObject)
                 .collect(Collectors.toList());
     }
 

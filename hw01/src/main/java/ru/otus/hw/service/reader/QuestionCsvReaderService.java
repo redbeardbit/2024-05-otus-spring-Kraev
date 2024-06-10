@@ -1,4 +1,4 @@
-package ru.otus.hw.service;
+package ru.otus.hw.service.reader;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.Setter;
