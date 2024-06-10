@@ -1,4 +1,4 @@
-package ru.otus.hw.dao;
+package ru.otus.hw.service;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 @Setter
-public class QuestionCsvReader implements QuestionReader {
+public class QuestionCsvReaderService implements QuestionReaderService {
 
     private Integer skipLines;
 

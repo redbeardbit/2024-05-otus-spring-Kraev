@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import ru.otus.hw.config.TestFileNameProvider;
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.domain.Question;
+import ru.otus.hw.service.QuestionReaderService;
 
 
 import java.util.List;
@@ -15,11 +16,11 @@ public class CsvQuestionDao implements QuestionDao {
 
     private final QuestionMapper questionMapper;
 
-    private final QuestionReader questionReader;
+    private final QuestionReaderService questionReaderService;
 
     public List<Question> findAll() {
 
-        List<QuestionDto> questionDtoList = questionReader.getQuestions(fileNameProvider.getTestFileName());
+        List<QuestionDto> questionDtoList = questionReaderService.getQuestions(fileNameProvider.getTestFileName());
 
         return questionMapper.questionDtosToQuestions(questionDtoList);
     }
