@@ -7,6 +7,7 @@
 Структура каталога:
 
 2024-05-otus-spring-Kraev\
+hw01\
 
 <details>
 <summary>Дополнительная информация</summary>
@@ -15,7 +16,7 @@
 
 Для выполнения упражнений необходимо:
 * JDK 11
-* Apache Maven >= 3.5.* (или встроенный в IntelliJ IDEA) 
+* Apache Maven >= 3.5.* (или встроенный в IntelliJ IDEA)
 
 ## Как пользоваться?
 
@@ -25,7 +26,7 @@
 
 ## Что прочитать перед курсом?
 
-### General 
+### General
 * [Learn Git in a Month of Lunches](https://pepa.holla.cz/wp-content/uploads/2016/01/Learn-Git-in-a-Month-of-Lunches.pdf)
 * [Test Driven Development: By Example](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530)
 
@@ -73,13 +74,13 @@
 
 ### Java
 * [The Garbage Collection Handbook: The Art of Automatic Memory Management](https://www.amazon.com/Garbage-Collection-Handbook-Management-Algorithms/dp/1420082795)
-* 
+*
 
 ### DBs
 * [Principles of database systems](https://www.sti-innsbruck.at/sites/default/files/Knowledge-Representation-Search-and-Rules/principles-of-database-and-knowledge-base-systems-volume-1-1.pdf)
 
 ### Architecture
-* [Kafka: The Definitive Guide](https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153/) 
+* [Kafka: The Definitive Guide](https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153/)
 * [Building Microservices](https://www.oreilly.com/library/view/building-microservices/9781491950340/)
 * [I Heart Logs](https://www.oreilly.com/library/view/i-heart-logs/9781491909379/)
 * [Akka in Action](https://www.oreilly.com/library/view/akka-in-action/9781617291012/)
@@ -89,7 +90,7 @@
 * [Pattern-Oriented Software Architecture, Volume 3: Patterns for Resource Management](https://www.oreilly.com/library/view/pattern-oriented-software-architecture/9780470845257/)
 * [Patterns of Enterprise Application Architecture](https://www.oreilly.com/library/view/patterns-of-enterprise/0321127420/)
 * [The Art of Scalability: Scalable Web Architecture, Processes, and Organizations for the Modern Enterprise, Second Edition
-DevOps](https://www.oreilly.com/library/view/the-art-of/9780134031408/)
+  DevOps](https://www.oreilly.com/library/view/the-art-of/9780134031408/)
 
 ### DevOps
 * [Effective DevOps](https://www.oreilly.com/library/view/effective-devops/9781491926291/)
