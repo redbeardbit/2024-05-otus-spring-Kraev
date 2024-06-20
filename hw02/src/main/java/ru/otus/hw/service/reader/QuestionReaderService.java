@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface QuestionReaderService {
 
-    List<QuestionDto> getQuestions(String sourceName, int skipLines);
+    List<QuestionDto> getQuestions(String sourceName);
 
 }

@@ -2,7 +2,6 @@ package ru.otus.hw.dao;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import ru.otus.hw.config.TestConfig;
 import ru.otus.hw.config.TestFileNameProvider;
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.domain.Question;
@@ -17,8 +16,6 @@ public class CsvQuestionDao implements QuestionDao {
 
     private final TestFileNameProvider fileNameProvider;
 
-    private final TestConfig testConfig;
-
     private final QuestionMapper questionMapper;
 
     private final QuestionReaderService questionReaderService;
@@ -27,8 +24,7 @@ public class CsvQuestionDao implements QuestionDao {
     public List<Question> findAll() {
 
         List<QuestionDto> questionDtoList = questionReaderService.getQuestions(
-                fileNameProvider.getTestFileName(),
-                testConfig.getCountSkipLinesInQuestionFile()
+                fileNameProvider.getTestFileName()
         );
 
         return questionMapper.questionDtosToQuestions(questionDtoList);

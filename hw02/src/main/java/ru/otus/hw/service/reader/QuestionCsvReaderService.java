@@ -1,7 +1,9 @@
 package ru.otus.hw.service.reader;
 
 import com.opencsv.bean.CsvToBeanBuilder;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.otus.hw.config.TestConfig;
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.exceptions.QuestionReadException;
 
@@ -10,10 +12,13 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class QuestionCsvReaderService implements QuestionReaderService {
 
+    private final TestConfig testConfig;
+
     @Override
-    public List<QuestionDto> getQuestions(String sourceName, int skipLines) {
+    public List<QuestionDto> getQuestions(String sourceName) {
 
         ClassLoader classLoader = getClass().getClassLoader();
 
@@ -24,7 +29,7 @@ public class QuestionCsvReaderService implements QuestionReaderService {
 
             questionDtoList = new CsvToBeanBuilder(inputStreamReader)
                     .withType(QuestionDto.class)
-                    .withSkipLines(skipLines)
+                    .withSkipLines(testConfig.getCountSkipLinesInQuestionFile())
                     .withSeparator(';')
                     .build().parse();
 
@@ -34,5 +39,4 @@ public class QuestionCsvReaderService implements QuestionReaderService {
 
         return questionDtoList;
     }
-
 }
