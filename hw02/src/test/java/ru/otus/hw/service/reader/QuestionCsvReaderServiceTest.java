@@ -13,9 +13,9 @@ import static org.mockito.Mockito.when;
 @DisplayName("QuestionCsvReaderServiceTest | Question csv reader service ")
 public class QuestionCsvReaderServiceTest {
 
-    TestConfig testConfig;
-    TestFileNameProvider testFileNameProvider;
-    QuestionCsvReaderService questionCsvReaderService;
+    private TestConfig testConfig;
+    private TestFileNameProvider testFileNameProvider;
+    private QuestionCsvReaderService questionCsvReaderService;
 
     @BeforeEach
     public void init() {
