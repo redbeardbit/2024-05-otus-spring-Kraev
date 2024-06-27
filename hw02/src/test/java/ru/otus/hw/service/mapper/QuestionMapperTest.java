@@ -1,11 +1,13 @@
-package mapper;
+package ru.otus.hw.service.mapper;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import ru.otus.hw.dao.dto.QuestionDto;
 import ru.otus.hw.domain.Answer;
 import ru.otus.hw.domain.Question;
-import ru.otus.hw.service.mapper.QuestionMapper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,11 +16,14 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@ExtendWith(MockitoExtension.class)
+@DisplayName("QuestionMapperTest | map DTO to Question ")
 public class QuestionMapperTest {
 
     private QuestionMapper questionMapper;
     private QuestionDto questionDto;
     private List<QuestionDto> questionDtoList;
+
 
     @BeforeEach
     public void init() {
@@ -31,7 +36,7 @@ public class QuestionMapperTest {
                 new Answer("Science doesn't know this yet", true),
                 new Answer("maybe yes", false),
                 new Answer("maybe no", false)
-            ));
+        ));
 
         questionDtoList.add(questionDto);
     }
@@ -49,12 +54,12 @@ public class QuestionMapperTest {
     @Test
     void questionDtosToQuestions_correctQuestionDto_ShouldMapCorrectToAnswers() {
 
-        List<Question> expectedQuestions = Arrays.asList(
+        List<Question> expectedQuestions = List.of(
                 new Question("it's okay?", Arrays.asList(
                         new Answer("Science doesn't know this yet", true),
                         new Answer("maybe yes", false),
                         new Answer("maybe no", false)
-                    )
+                )
                 ));
 
         List<Question> questions = questionMapper.questionDtosToQuestions(questionDtoList);

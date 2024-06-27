@@ -2,7 +2,9 @@ package ru.otus.hw.dao.dto;
 
 import com.opencsv.bean.CsvBindAndSplitByPosition;
 import com.opencsv.bean.CsvBindByPosition;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import ru.otus.hw.domain.Answer;
 import ru.otus.hw.domain.Question;
@@ -12,6 +14,8 @@ import java.util.List;
 
 @Data
 @Component
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class QuestionDto {
 
     @CsvBindByPosition(position = 0)

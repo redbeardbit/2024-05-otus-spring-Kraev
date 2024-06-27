@@ -3,25 +3,35 @@ package ru.otus.hw.service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.contains;
+import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 @DisplayName("StudentServiceImplTest | Student service ")
 public class StudentServiceImplTest {
 
     private final String expectedFirstName = "Chuck";
     private final String expectedLastName = "Norris";
+
+    @Mock
     private IOService ioService;
+
+    @InjectMocks
     private StudentServiceImpl studentServiceImpl;
 
     @BeforeEach
     public void init() {
-        ioService = Mockito.mock(IOService.class);
-        Mockito.when(ioService.readStringWithPrompt(Mockito.contains("first"))).thenReturn(expectedFirstName);
-        Mockito.when(ioService.readStringWithPrompt(Mockito.contains("last"))).thenReturn(expectedLastName);
-
-        studentServiceImpl = new StudentServiceImpl(ioService);
+        assertNotNull(ioService);
+        assertNotNull(studentServiceImpl);
+        when(ioService.readStringWithPrompt(contains("first"))).thenReturn(expectedFirstName);
+        when(ioService.readStringWithPrompt(contains("last"))).thenReturn(expectedLastName);
     }
 
     @Test
