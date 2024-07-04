@@ -9,6 +9,7 @@
 2024-05-otus-spring-Kraev\
 hw01\
 hw02\
+hw03\
 
 <details>
 <summary>Дополнительная информация</summary>
