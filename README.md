@@ -10,6 +10,7 @@
 hw01\
 hw02\
 hw03\
+hw04\
 
 <details>
 <summary>Дополнительная информация</summary>
