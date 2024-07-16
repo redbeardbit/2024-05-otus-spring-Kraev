@@ -1,6 +1,6 @@
 spring:
   main:
-    banner-mode: off
+    banner-mode: LOG
   messages:
     baseName: messages
     encoding: UTF-8
@@ -8,8 +8,24 @@ spring:
     # Если false то будут браться сообщения из дефолтного файла, если true, то из файла соответствующего системной локали
     fallbackToSystemLocale: false
   shell:
-    noninteractive:
-      primary-command: run
+    interactive:
+      enabled: true
+    terminal-width: 120
+    terminal-height: 80
+    command:
+      stacktrace:
+        enabled: false
+      script:
+        enabled: false
+      history:
+        enabled: false
+      version:
+        enabled: false
+org:
+  jline:
+    terminal:
+      dumb=true
+
 test:
   rightAnswersCountToPass: 3
   countSkipLinesInQuestionFile: 1
