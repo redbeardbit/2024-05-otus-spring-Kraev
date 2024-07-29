@@ -1,0 +1,35 @@
+spring:
+  main:
+    banner-mode: LOG
+  messages:
+    baseName: messages
+    encoding: UTF-8
+    # Не дает свалиться в системную локаль если не найден файл для переданной в MessageSource
+    # Если false то будут браться сообщения из дефолтного файла, если true, то из файла соответствующего системной локали
+    fallbackToSystemLocale: false
+  shell:
+    interactive:
+      enabled: true
+    terminal-width: 120
+    terminal-height: 80
+    command:
+      stacktrace:
+        enabled: false
+      script:
+        enabled: false
+      history:
+        enabled: false
+      version:
+        enabled: false
+org:
+  jline:
+    terminal:
+      dumb=true
+
+test:
+  rightAnswersCountToPass: 3
+  countSkipLinesInQuestionFile: 1
+  locale: en-UK
+  fileNameByLocaleTag:
+    ru-RU: questions_ru_RU.csv
+    en-UK: questions_en_UK.csv
